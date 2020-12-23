@@ -27,19 +27,8 @@ func main() {
 	api := router.Group("/api/v1")
 
 	api.POST("/users", userHandler.RegisterUser)
+	api.POST("/sessions", userHandler.Login)
 
 	router.Run()
 
-
-
-	// userInput := user.RegisterUserInput{}
-	// userInput.Name = "Tes simpan dari service"
-	// userInput.Email = "contoh@gmail.com"
-	// userInput.Occupation = "siBolang"
-	// userInput.Password = "password"
-
-	// userService.RegisterUser(userInput)
-
-	// input
-	
 }
